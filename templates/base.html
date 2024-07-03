@@ -1,36 +1,7 @@
 <!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <title>{% block title %}Ehsanik's Website{% endblock %}</title>
-    <style>
-        /* Add your common CSS styles here */
-        body {
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #f8f8f8;
-            padding: 10px;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        .content {
-            padding: 20px;
-        }
-    </style>
-</head> -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Kiana Ehsani</title>
@@ -240,6 +211,24 @@
             margin: 10px 0 0;
             font-size: 1.2em;
         }
+        .btn_inv {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #f4f4f4; /* Very light color */
+        background-color: #f4f4f4; /* Same as background */
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .btn_inv:hover {
+        background-color: #e0e0e0; /* Slightly darker on hover */
+        color: #333; /* Slightly visible text on hover */
+      }
     </style>
   </head>
 <!-- Google tag (gtag.js) -->
@@ -257,14 +246,7 @@
             <img src="static/kiana_small.jpg" alt="Kiana Ehsani">
             <h1>Kiana Ehsani</h1> 
           </header>
-        <!-- <nav>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/selected_works.html">Selected Works</a></li>
-              <li><a href="/cv.html">CV</a></li>
-              <li><a href="/mountains.html">Mountains</a></li>
-            </ul>
-          </nav> -->
+        
           <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
