@@ -6,16 +6,16 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/selected_works')
+@app.route('/selected_works.html')
 def selected_works():
     return render_template('selected_works.html')
 
-@app.route('/cv')
+@app.route('/cv.html')
 def cv():
     return render_template('cv.html')
 
 
-@app.route('/mountains')
+@app.route('/mountains.html')
 def mountains():
     return render_template('mountains.html')
 

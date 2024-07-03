@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <title>{% block title %}Ehsanik's Website{% endblock %}</title>
+    <title>Home</title>
     <style>
         /* Add your common CSS styles here */
         body {
@@ -257,7 +257,7 @@
           <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="{{ url_for('selected_works') }}">Selected Works</a></li> -->
+                <!-- <li><a href="/selected_works.html">Selected Works</a></li> -->
                 <li><a href="selected_works.html">Selected Works</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="mountains.html">Mountains</a></li>
@@ -265,7 +265,75 @@
         </nav>
     </header>
     <div class="content">
-        {% block content %}{% endblock %}
+        
+  <div class="container">
+    <h2>Checklist Generator</h2>
+    <div class="two-columns">
+      <div class="column">
+    <p >I recently made myself a checklist generator for outdoor adventures. </p>
+  </div>
+  <div class="column">
+    <!-- <p><a href="https://www.google.com/url?q=https%3A%2F%2Fehsanik.github.io%2Fmountain-projects%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3ahcg6cQrmUvM0l5IQqwUC">
+      <p>Ready To Get Out?</p></a></p> -->
+      <p style="text-align: center"><a class="btn" href="https://www.google.com/url?q=https%3A%2F%2Fehsanik.github.io%2Fmountain-projects%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3ahcg6cQrmUvM0l5IQqwUC">Use it for your adventures!</a></p>
+    </div>
+    </div>
+  </div>
+  <div class="container">
+    <h2>Some Random Memories</h2>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="static/Mountains/86216915b31a35c36cfd1d4f7bbb188d.jpg" alt="86216915b31a35c36cfd1d4f7bbb188d">
+        <p>Red Rocks</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/8b501046ce6f96d18151aa078227f189.jpg" alt="8b501046ce6f96d18151aa078227f189">
+        <p>Kazakhstan</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/52c4c261eb65c6472c6d39864d09170e.jpg" alt="52c4c261eb65c6472c6d39864d09170e">
+        <p>Kyrgyzstan</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/f1ad02478762ca732236f4437a36d842.jpg" alt="f1ad02478762ca732236f4437a36d842">
+        <p>Tajikstan</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/8e947c235293d09715ff7cca313f138c.jpg" alt="8e947c235293d09715ff7cca313f138c">
+        <p>Paradise Glacier</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/247220534885288aa453b3016101168a.jpg" alt="247220534885288aa453b3016101168a">
+        <p>Observation Rock (Ice Climbing)</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/b18bca928d2ed482603b45e95b0b73ef.jpg" alt="b18bca928d2ed482603b45e95b0b73ef">
+        <p>SEWS (South Arrette)</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/6c135c00b370323d32fa3a183abfcee9.jpg" alt="6c135c00b370323d32fa3a183abfcee9">
+        <p>Ruth Mountain</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/5f4982a1af7fbf38de4aff74f6fecdde.jpg" alt="5f4982a1af7fbf38de4aff74f6fecdde">
+        <p>Rainbow Mountain (Peru)</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/80cbe5c6fcc61e540f24a3255408cd60.jpg" alt="80cbe5c6fcc61e540f24a3255408cd60">
+        <p>Mount Bachelor</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/93677953cd347771f8be993472895947.jpg" alt="93677953cd347771f8be993472895947">
+        <p>Wayne's World (Dry tooling crag)</p>
+      </div>
+      <div class="grid-item">
+        <img src="static/Mountains/c3175b9f1410f01f9f5338485b1be6c9.jpg" alt="c3175b9f1410f01f9f5338485b1be6c9">
+        <p>Mount Baker</p>
+      </div>
+    </div>
+  </div>
+
+
         <br><br><br><br><br>
     </div>
     <footer>

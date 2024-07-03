@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <title>{% block title %}Ehsanik's Website{% endblock %}</title>
+    <title>Home</title>
     <style>
         /* Add your common CSS styles here */
         body {
@@ -257,7 +258,7 @@
           <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="{{ url_for('selected_works') }}">Selected Works</a></li> -->
+                <!-- <li><a href="/selected_works.html">Selected Works</a></li> -->
                 <li><a href="selected_works.html">Selected Works</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="mountains.html">Mountains</a></li>
@@ -265,7 +266,59 @@
         </nav>
     </header>
     <div class="content">
-        {% block content %}{% endblock %}
+        
+  <!-- <div class="header_main" bg_image="static/mtn_bg.jpg">
+    <img src="static/kiana_main.jpg" width=300px; alt="Kiana Ehsani">
+    <p style="small font">** It is not hard to see that I am the worst with design or visual art! Bear with me :D
+    </p>
+    # Second column
+    <h1>Kiana Ehsani</h1>
+    <p> Senior Research Scientist <br>
+      PRIOR <br>
+      Allen Institute for Artificial Intelligence</p>
+  </div> -->
+  <div class="header_main">
+    <div class="left-column">
+        <img src="static/kiana_main.jpg" alt="Kiana Ehsani">
+        <p class="small-font">** It is not hard to see that I am the worst with design or visual art! Bear with me :D</p>
+    </div>
+    <div class="right-column">
+        <h1>Kiana Ehsani</h1>
+        <p>Senior Research Scientist <br> PRIOR <br> Allen Institute for Artificial Intelligence</p>
+    </div>
+</div>
+  <div class="container">
+    <h1>Who am I?</h1>
+    <p>I am currently a senior research scientist @ <a href="https://prior.allenai.org/">PRIOR</a> @ <a href="https://allenai.org/">Allen Institute for AI</a>. Prior to joining PRIOR 😁, I was a Ph.D. student @ <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at the <a href="https://www.washington.edu/">University of Washington</a> under the supervision of Professor <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a>. My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI).</p>
+    <h1>What's up?</h1>
+    <div class="updates">
+      <p>2024.02.16: Gave a talk at University of Pittsburgh.</p>
+      <p>2024.01.01: AC @ CVPR 2024.</p>
+      <p>2024.01.16: Visited Stanford and Berkeley and gave a talk at BAIR.</p>
+      <p>2023.12.12: <a href="https://objaverse.allenai.org/">Obajverse-XL</a> @ NeurIPS 2023.</p>
+      <p>2023.11.06: Co-organized the Workshop <a href="https://sites.google.com/view/corl23-task-workshop">"What tasks should robotics researchers focus on?"</a> @ CoRL 2023.</p>
+      <p>2023.06.21: <a href="https://sfa.cs.columbia.edu/">Structure From Action</a> @ IROS 2023.</p>
+      <p>2023.06.21: <a href="https://phone2proc.allenai.org/">Phone2Proc</a> and <a href="https://objaverse.allenai.org/">Objaverse</a> @ CVPR 2023.</p>
+      <p>2023.06.18: Gave a talk @ <a href="https://struco3d.github.io/cvpr2023/">Structural and Compositional Learning on 3D Data</a> @ CVPR 2023.</p>
+      <p>2023.01.03: DEI co-chair @ <a href="https://wacv2023.thecvf.com/organizers">WACV 2023</a>.</p>
+      <p>2022.12.15: Gave a talk @ <a href="https://gjstein.github.io/corl2022wkshp-long-horizon-planning/">Long Horizon Planning Workshop</a> @ CoRL 2022.</p>
+      <p>2022.12.15: Co-organized the workshop @ <a href="https://sites.google.com/view/corl22benchmarkingworkshop/home">Benchmarking in Robotic Manipulation</a> @ CoRL 2022.</p>
+      <p>2022.11.22: Won outstanding paper for our work <a href="https://procthor.allenai.org/">ProcTHOR</a> @ NeurIPS 2022.</p>
+      <p>2022.11.17: Gave a talk @ CMU.</p>
+      <p>2022.10.24: <a href="https://prior.allenai.org/projects/m-vole">Object Manipulation via Visual Target Localization</a> @ ECCV 2022.</p>
+      <p>2022.06.23: <a href="https://prior.allenai.org/projects/csr">Continuous Scene Representation</a> @ CVPR 2022.</p>
+    </div>
+    <h2>Get in touch</h2>
+    <div class="contact">
+      <a href="https://github.com/ehsanik"><img src="static/github_logo.png" alt="GitHub" width="28" height="28"></a>
+      <a href="https://twitter.com/ehsanik"><img src="static/x_logo.png" alt="Twitter" width="28" height="28"></a>
+      <a href="https://scholar.google.com/citations?user=RScZCLEAAAAJ&hl=en"><img src="static/gscholar.png" alt="Google Scholar" width="32" height="32"></a>
+      <a href="mailto:ehsanik@gmail.com"><img src="static/email_logo.png" alt="Email" width="32" ></a>
+   
+
+    </div>
+  </div>
+
         <br><br><br><br><br>
     </div>
     <footer>

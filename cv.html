@@ -1,3 +1,5 @@
+
+<!-- index.html -->
 <!-- base.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <title>{% block title %}Ehsanik's Website{% endblock %}</title>
+    <title>Home</title>
     <style>
         /* Add your common CSS styles here */
         body {
@@ -257,7 +259,7 @@
           <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="{{ url_for('selected_works') }}">Selected Works</a></li> -->
+                <!-- <li><a href="/selected_works.html">Selected Works</a></li> -->
                 <li><a href="selected_works.html">Selected Works</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="mountains.html">Mountains</a></li>
@@ -265,7 +267,12 @@
         </nav>
     </header>
     <div class="content">
-        {% block content %}{% endblock %}
+        
+  <div class="container">
+    <iframe src="https://drive.google.com/file/d/1kWAums2v1mGVGV1A8ZTytSEK3Goa5pUH/preview" width=100% height=800px allow="autoplay"></iframe>
+
+  </div>
+
         <br><br><br><br><br>
     </div>
     <footer>
