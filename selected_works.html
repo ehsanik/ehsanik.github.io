@@ -36,6 +36,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Kiana Ehsani</title>
+    <meta name="description" content="Kiana Ehsani's Personal Website">
+    <link rel="canonical" href="https://ehsanik.github.io/">
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -242,11 +244,20 @@
         }
     </style>
   </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9HWJ1GP42Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9HWJ1GP42Z');
+</script>
 <body>
     <header>
         <header>
             <img src="static/kiana_small.jpg" alt="Kiana Ehsani">
-            <h1>Kiana Ehsani</h1>
+            <h1>Kiana Ehsani</h1> 
           </header>
         <!-- <nav>
             <ul>
@@ -280,10 +291,43 @@
 
       
       <div class="paper">
+        <img class="teaser" src="static/selected_works/manipulateanything.gif">
+        <div class="paper-details">
+          <h3>Manipulate-Anything: Automating Real-World Robots using Vision-Language Models </h3>
+          <p>Jiafei Duan*, Wentao Yuan*, Wilbert Pumacay, Yi Ru Wang, <b>Kiana Ehsani</b>, Dieter Fox, Ranjay Krishna • Arxiv • 2024</p>
+          <p>(<a href="https://arxiv.org/pdf/2406.18915">Paper</a>) (<a href="https://robot-ma.github.io/">Website</a>) (<a href="">Code</a>)</p>
+          <p>Manipulate-Anything, is a scalable automated method for generating real-world robotic manipulation data without privileged state information or hand-designed skills, significantly outperforming existing methods and training more robust behavior cloning policies.</p>
+        </div>
+      </div>
+      
+      
+      <div class="paper">
+        <img class="teaser" src="static/selected_works/poliformer.png">
+        <div class="paper-details">
+          <h3>PoliFormer: On-Policy RL with Transformers Results in Masterful Navigators </h3>
+          <p>Kuo-Hao Zeng, Zichen "Charles" Zhang, <b>Kiana Ehsani</b>, Rose Hendrix, Jordi Salvador,
+            Alvaro Herrasti, Ross Girshick, Aniruddha Kembhavi, Luca Weihs • Arxiv • 2024</p>
+          <p>(<a href="https://arxiv.org/pdf/2406.20083">Paper</a>) (<a href="https://poliformer.allen.ai/">Website</a>) (<a href="">Code</a>)</p>
+          <p>Policy TransFormer (PoliFormer) is a transformer-based policy trained using RL at scale in simulation. PoliFormer achieves SoTA results across LoCoBot and Stretch RE-1, in both simulation and real-world.</p>
+        </div>
+      </div>
+      
+      <div class="paper">
+        <img class="teaser" src="static/selected_works/harmonicmm.gif">
+        <div class="paper-details">
+          <h3>Harmonic Mobile Manipulation</h3>
+          <p>Ruihan Yang, Yejin Kim, Aniruddha Kembhavi, Xiaolong Wang, <b>Kiana Ehsani</b> • IROS • 2024</p>
+          <p>(<a href="https://arxiv.org/pdf/2312.06639">Paper</a>) (<a href="https://rchalyang.github.io/HarmonicMM/">Website</a>) (<a href="">Code</a>)</p>
+          <p>HarmonicMM is an end-to-end learning approach that combines navigation and manipulation, significantly improving success rates in complex tasks like door opening and table cleaning, with successful real-world transfer of agents trained in simulation.</p>
+        </div>
+      </div>
+
+      
+      <div class="paper">
         <img class="teaser" src="static/selected_works/spoc.png">
         <div class="paper-details">
           <h3>SPOC🖖: Imitating Shortest Paths in Simulation Enables Effective Navigation and Manipulation in the Real World</h3>
-          <p>Kiana Ehsani*, Tanmay Gupta*, Rose Hendrix*, Jordi Salvador*, Luca Weihs*, Kuo-Hao Zeng*, Kunal Pratap Singh, Yejin Kim, Winson Han, Alvaro Herrasti, Ranjay Krishna, Dustin Schwenk, Eli VanderBilt, Aniruddha Kembhavi • CVPR • 2024</p>
+          <p><b>Kiana Ehsani</b>*, Tanmay Gupta*, Rose Hendrix*, Jordi Salvador*, Luca Weihs*, Kuo-Hao Zeng*, Kunal Pratap Singh, Yejin Kim, Winson Han, Alvaro Herrasti, Ranjay Krishna, Dustin Schwenk, Eli VanderBilt, Aniruddha Kembhavi • CVPR • 2024</p>
           <p>(<a href="https://arxiv.org/abs/2312.02976">Paper</a>) (<a href="https://spoc-robot.github.io/">Website</a>) (<a href="https://github.com/allenai/spoc-robot-training">Code</a>)</p>
           <p>We train a supervised model to imitate shortest path trajectories collected from simulation and show that it generalizes to perform effective navigation and manipulation when deployed on real world agents.</p>
         </div>
@@ -293,7 +337,7 @@
         <img class="teaser" src="static/selected_works/promptable.jpg">
         <div class="paper-details">
           <h3>Promptable Behaviors: Personalizing Multi-Objective Rewards from Human Preferences</h3>
-          <p>Minyoung Hwang, Luca Weihs, Chanwoo Park, Kimin Lee, Ani Kembhavi, Kiana Ehsani • CVPR • 2024</p>
+          <p>Minyoung Hwang, Luca Weihs, Chanwoo Park, Kimin Lee, Ani Kembhavi, <b>Kiana Ehsani</b> • CVPR • 2024</p>
           <p>(<a href="https://arxiv.org/abs/2312.02976">Paper</a>) (<a href="https://spoc-robot.github.io/">Website</a>) (<a href="http://tbd">Code</a>)</p>
           <p>We propose a novel framework that facilitates efficient personalization of robotic agents to diverse human preferences in complex environments.</p>
         </div>
@@ -304,7 +348,7 @@
         <img class="teaser" src="static/selected_works/objaverse-xl.jpg">
         <div class="paper-details">
           <h3>Objaverse-XL: A Universe of 10M+ 3D Objects</h3>
-          <p>Matt Deitke, Ruoshi Liu, Matthew Wallingford, Huong Ngo, Oscar Michel, Aditya Kusupati, Alan Fan, Christian Laforte, Vikram Voleti, Samir Yitzhak Gadre, Eli VanderBilt, Aniruddha Kembhavi, Carl Vondrick, Georgia Gkioxari, Kiana Ehsani, Ludwig Schmidt*, Ali Farhadi* • NeurIPS • 2023</p>
+          <p>Matt Deitke, Ruoshi Liu, Matthew Wallingford, Huong Ngo, Oscar Michel, Aditya Kusupati, Alan Fan, Christian Laforte, Vikram Voleti, Samir Yitzhak Gadre, Eli VanderBilt, Aniruddha Kembhavi, Carl Vondrick, Georgia Gkioxari, <b>Kiana Ehsani</b>, Ludwig Schmidt*, Ali Farhadi* • NeurIPS • 2023</p>
           <p>(<a href="https://arxiv.org/abs/2307.05663">Paper</a>) (<a href="https://objaverse.allenai.org/">Website</a>) (<a href="https://github.com/allenai/objaverse-xl">Code</a>)</p>
           <p>We introduce Objaverse-XL, an open dataset of over 10 million 3D objects. With it, we train Zero123-XL, a foundation model for 3D, observing incredible 3D generalization abilities. With the Zero123-XL base model, we can then perform image-to-3D and text-to-3D.</p>
         
@@ -317,7 +361,7 @@
         <div class="paper-details">
           
         <h3>Structure from Action: Learning Interactions for 3D Articulated Object Structure Discovery</h3>
-        <p>Neil Nie, Samir Yitzhak Gadre, Kiana Ehsani, Shuran Song • IROS • 2023</p>
+        <p>Neil Nie, Samir Yitzhak Gadre, <b>Kiana Ehsani</b>, Shuran Song • IROS • 2023</p>
         <p>(<a href="https://arxiv.org/abs/2207.08997">Paper</a>) (<a href="https://sfa.cs.columbia.edu/">Website</a>) </p>
         <p>We learn how to interact with 3D articulated objects to reconstruct their parts and discover joint constraints.</p>
         </div>
@@ -328,7 +372,7 @@
         <img class="teaser" src="static/selected_works/objaverse.jpg">
         <div class="paper-details">
           <h3>Objaverse: A Universe of Annotated 3D Objects</h3>
-          <p>Matt Deitke, Dustin Schwenk, Jordi Salvador, Luca Weihs, Oscar Michel, Eli VanderBilt, Ludwig Schmidt, Kiana Ehsani, Aniruddha Kembhavi, Ali Farhadi • CVPR • 2023</p>
+          <p>Matt Deitke, Dustin Schwenk, Jordi Salvador, Luca Weihs, Oscar Michel, Eli VanderBilt, Ludwig Schmidt, <b>Kiana Ehsani</b>, Aniruddha Kembhavi, Ali Farhadi • CVPR • 2023</p>
           <p>(<a href="https://arxiv.org/abs/2212.08051">Paper</a>) (<a href="https://objaverse.allenai.org/objaverse-1.0">Website</a>)</p>
           <p>Objaverse is a massive dataset of objects with 800K+ (and growing) 3D models with descriptive captions, tags, and animations. We demonstrate it's potential by training generative models, improving 2D instance segmentation, training open-vocabulary object navigation models, and creating a benchmark for testing the robustness of vision models.</p>
         </div>
@@ -338,7 +382,7 @@
         <img class="teaser" src="static/selected_works/phone2proc.jpg">
         <div class="paper-details">
           <h3>Phone2Proc: Bringing Robust Robots Into Our Chaotic World</h3>
-          <p>Matt Deitke*, Rose Hendrix*, Luca Weihs, Ali Farhadi, Kiana Ehsani, Aniruddha Kembhavi • CVPR • 2023</p>
+          <p>Matt Deitke*, Rose Hendrix*, Luca Weihs, Ali Farhadi, <b>Kiana Ehsani</b>, Aniruddha Kembhavi • CVPR • 2023</p>
           <p>(<a href="https://arxiv.org/pdf/2212.04819.pdf">Paper</a>) (<a href="https://allenai.org/project/phone2proc">Website</a>)</p>
           <p>From a 10-minute iPhone scan of any environment, we generated simulated training scenes that semantically match that environment. Training a robot to perform ObjectNav in these scenes dramatically improves sim-to-real performance from 35% to 71% and results in an agent that is remarkably robust to human movement, lighting variations, added clutter, and rearranged objects.</p>
         </div>
@@ -348,7 +392,7 @@
         <img class="teaser" src="static/selected_works/procthor.jpg">
         <div class="paper-details">
           <h3>🏘️ ProcTHOR: Large-Scale Embodied AI Using Procedural Generation</h3>
-          <p>Matt Deitke, Eli VanderBilt, Alvaro Herrasti, Luca Weihs, Jordi Salvador, Kiana Ehsani, Winson Han, Eric Kolve, Ali Farhadi, Aniruddha Kembhavi, Roozbeh Mottaghi • NeurIPS • 2022</p>
+          <p>Matt Deitke, Eli VanderBilt, Alvaro Herrasti, Luca Weihs, Jordi Salvador, <b>Kiana Ehsani</b>, Winson Han, Eric Kolve, Ali Farhadi, Aniruddha Kembhavi, Roozbeh Mottaghi • NeurIPS • 2022</p>
           <p>🎉 Outstanding Paper Award</p>
           <p>(<a href="https://arxiv.org/pdf/2206.06994.pdf">Paper</a>) (<a href="https://procthor.allenai.org/">Website</a>)</p>
           <p>We built a platform to procedurally generate realistic, interactive, simulated 3D environments to dramatically scale up the diversity and size of training data in Embodied AI. We find that it helps significantly with performance on many tasks.</p>
@@ -359,7 +403,7 @@
         <img class="teaser" src="static/selected_works/mvole.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/pdf/2203.08141.pdf">Object Manipulation via Visual Target Localization</a></h3>
-          <p>Kiana Ehsani, Ali Farhadi, Aniruddha Kembhavi and Roozbeh Mottaghi • ECCV • 2022</p>
+          <p><b>Kiana Ehsani</b>, Ali Farhadi, Aniruddha Kembhavi and Roozbeh Mottaghi • ECCV • 2022</p>
           <p>(<a href="https://arxiv.org/abs/2203.08141">Paper</a>) (<a href="https://prior.allenai.org/projects/m-vole">Website</a>) (<a href="https://github.com/allenai/m-vole">Code</a>)</p>
           <p>Manipulation via Visual Object Location Estimation (m-VOLE) enhances Embodied AI agents' ability to manipulate objects by robustly estimating their 3D locations, even when not visible, significantly improving success rates in manipulation tasks and offering a more realistic approach to training agents for real-world object manipulation.</p>
         
@@ -370,7 +414,7 @@
         <img class="teaser" src="static/selected_works/continuous.jpg">
         <div class="paper-details">
           <h3><a href="https://www.semanticscholar.org/paper/Continuous-Scene-Representations-for-Embodied-AI-Gadre-Ehsani/6995c527e19c343174505994293f85fd3d2be5df">Continuous Scene Representations for Embodied AI</a></h3>
-          <p>Samir Y Gadre, Kiana Ehsani, Shuran Song and Roozbeh Mottaghi • CVPR • 2022</p>
+          <p>Samir Y Gadre, <b>Kiana Ehsani</b>, Shuran Song and Roozbeh Mottaghi • CVPR • 2022</p>
           <p>(<a href="https://arxiv.org/abs/2203.17251">Paper</a>) (<a href="https://prior.allenai.org/projects/csr">Website</a>) (<a href="https://github.com/allenai/CSR">Code</a>)</p>
           <p>Continuous Scene Representations (CSR) are proposed as a dynamic, graph-based method for modeling scenes by an embodied agent, using continuous embeddings to represent object relationships, enabling superior performance in visual room rearrangement tasks without specific training, and demonstrating relevance to real-world data.</p>
         
@@ -381,7 +425,7 @@
         <img class="teaser" src="static/selected_works/contrastive.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/abs/2103.14005">Contrasting Contrastive Self-Supervised Representation Learning Pipelines</a></h3>
-          <p>Klemen Kotar, Gabriel Ilharco, Ludwig Schmidt, Kiana Ehsani, and Roozbeh Mottaghi • ICCV • 2021</p>
+          <p>Klemen Kotar, Gabriel Ilharco, Ludwig Schmidt, <b>Kiana Ehsani</b>, and Roozbeh Mottaghi • ICCV • 2021</p>
           <p>(<a href="https://arxiv.org/abs/2010.08539">Paper</a>) (<a href="https://prior.allenai.org/projects/virb">Website</a>) (<a href="https://github.com/allenai/virb">Code</a>)</p>
           <p>This paper analyzes the impact of training methods and datasets on the performance of self-supervised representation learning, focusing on contrastive approaches through an extensive study of over 700 experiments, examining their efficacy against supervised models and the influence of pre-training data on downstream tasks.</p>
         
@@ -393,7 +437,7 @@
         <img class="teaser" src="static/selected_works/atp.jpg">
         <div class="paper-details">
           <h3>Act the Part: Learning Interaction Strategies for Articulated Object Part Discovery</h3>
-          <p>Samir Y. Gadre, Kiana Ehsani, and Shuran Song • ICCV • 2021</p>
+          <p>Samir Y. Gadre, <b>Kiana Ehsani</b>, and Shuran Song • ICCV • 2021</p>
           <p>(<a href="https://arxiv.org/abs/2105.01047">Paper</a>) (<a href="https://atp.cs.columbia.edu/">Website</a>)</p>
           <p>Act the Part (AtP) is a method designed to interact with articulated objects to discover and segment their parts without semantic labels, demonstrating efficient part discovery strategies, generalization to unseen categories, and successful real-world transfer without fine-tuning.</p>
         
@@ -405,7 +449,7 @@
         <img class="teaser" src="static/selected_works/manipulathor.png">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/abs/2104.11213">ManipulaTHOR: A Framework for Visual Object Manipulation</a></h3>
-          <p>Kiana Ehsani, Winson Han, Alvaro Herrasti, Eli VanderBilt, Luca Weihs, Eric Kolve, Aniruddha Kembhavi, and Roozbeh Mottaghi • CVPR • 2021</p>
+          <p><b>Kiana Ehsani</b>, Winson Han, Alvaro Herrasti, Eli VanderBilt, Luca Weihs, Eric Kolve, Aniruddha Kembhavi, and Roozbeh Mottaghi • CVPR • 2021</p>
           <p>(<a href="https://arxiv.org/abs/2010.08539">Paper</a>) (<a href="https://ai2thor.allenai.org/manipulathor/">Website</a>) (<a href="https://github.com/allenai/manipulathor/">Code</a>)</p>
           <p>ManipulaTHOR is a framework designed for realistic object manipulation with a robotic arm in complex scenes, focusing on challenges like collision avoidance, grasping, planning, and generalization to new environments, equipped with a suite of sensory and motor functions for developing robust agents.</p>
         
@@ -417,7 +461,7 @@
         <img class="teaser" src="static/selected_works/human.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/pdf/2010.08539.pdf">What Can You Learn from Your Muscles? Learning Visual Representation from Human Interactions</a></h3>
-          <p>Kiana Ehsani, Daniel Gordon, Thomas Nguyen, Roozbeh Mottaghi, and Ali Farhadi • ICLR • 2021</p>
+          <p><b>Kiana Ehsani</b>, Daniel Gordon, Thomas Nguyen, Roozbeh Mottaghi, and Ali Farhadi • ICLR • 2021</p>
           <p>(<a href="https://arxiv.org/abs/2010.08539">Paper</a>) (<a href="https://prior.allenai.org/projects/learn-representation-from-human">Website</a>) (<a href="https://github.com/ehsanik/muscleTorch">Code</a>)</p>
           <p>This paper introduces a novel representation learning approach that leverages human interaction and attention cues, showing that this "muscly-supervised" method surpasses visual-only techniques in various tasks, including scene classification and action recognition.</p>
         
@@ -429,7 +473,7 @@
         <img class="teaser" src="static/selected_works/hide_seek.jpg">
         <div class="paper-details">
           <h3><a href="https://openreview.net/forum?id=UuchYL8wSZo">Learning Generalizable Visual Representations via Interactive Gameplay</a></h3>
-          <p>Luca Weihs, Aniruddha Kembhavi, Kiana Ehsani, Sarah M Pratt, Winson Han, Alvaro Herrasti, Eric Kolve, Dustin Schwenk, and 2 more... • ICLR • 2021</p>
+          <p>Luca Weihs, Aniruddha Kembhavi, <b>Kiana Ehsani</b>, Sarah M Pratt, Winson Han, Alvaro Herrasti, Eric Kolve, Dustin Schwenk, and 2 more... • ICLR • 2021</p>
           <p>(<a href="https://openreview.net/forum?id=UuchYL8wSZo">Paper</a>) (<a href="https://prior.allenai.org/projects/cache">Website</a>)</p>
           <p>This research shows that embodied gameplay, essential for neural flexibility in both humans and animals, can similarly impact artificial agents, whose learning and vision development are enhanced through interactive play, offering a new model for experiential representation learning.</p>
         
@@ -441,7 +485,7 @@
         <img class="teaser" src="static/selected_works/force.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/pdf/2003.12045.pdf">Use the Force, Luke! Learning to Predict Physical Forces by Simulating Effects</a></h3>
-          <p>Kiana Ehsani, Shubham Tulsiani, Saurabh Gupta, Ali Farhadi, and Abhinav Gupta • CVPR • 2020</p>
+          <p><b>Kiana Ehsani</b>, Shubham Tulsiani, Saurabh Gupta, Ali Farhadi, and Abhinav Gupta • CVPR • 2020</p>
           <p>(<a href="https://arxiv.org/abs/2003.12045">Paper</a>) (<a href="https://ehsanik.github.io/forcecvpr2020/">Website</a>) (<a href="https://github.com/ehsanik/touchTorch">Code</a>)</p>
           <p>This paper advances the understanding of human-object interactions by inferring contact points and physical forces from videos, using a physics simulator for supervision to ensure predicted effects match those observed in the video.</p>
         
@@ -453,7 +497,7 @@
         <img class="teaser" src="static/selected_works/learn2learn.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/pdf/1812.00971.pdf">Learning to Learn How to Learn: Self-Adaptive Visual Navigation using Meta-Learning</a></h3>
-          <p>Mitchell Wortsman, Kiana Ehsani, Mohammad Rastegari, Ali Farhadi, and Roozbeh Mottaghi • CVPR • 2019</p>
+          <p>Mitchell Wortsman, <b>Kiana Ehsani</b>, Mohammad Rastegari, Ali Farhadi, and Roozbeh Mottaghi • CVPR • 2019</p>
           <p>(<a href="https://arxiv.org/abs/1812.00971">Paper</a>) (<a href="https://prior.allenai.org/projects/savn">Website</a>) (<a href="https://github.com/allenai/savn">Code</a>)</p>
           <p>This paper introduces SAVN, a self-adaptive visual navigation method that uses meta-reinforcement learning to enable an agent to adapt and learn in new environments without explicit supervision, showing significant improvements in navigation success and efficiency.</p>
         
@@ -465,7 +509,7 @@
         <img class="teaser" src="static/selected_works/dog.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/pdf/1803.10827.pdf">Who Let The Dogs Out? Modeling Dog Behavior From Visual Data</a></h3>
-          <p>Kiana Ehsani, Hessam Bagherinezhad, Joe Redmon, Roozbeh Mottaghi, and Ali Farhadi • CVPR • 2018</p>
+          <p><b>Kiana Ehsani</b>, Hessam Bagherinezhad, Joe Redmon, Roozbeh Mottaghi, and Ali Farhadi • CVPR • 2018</p>
           <p>(<a href="https://arxiv.org/pdf/1803.10827.pdf">Paper</a>) (<a href="https://github.com/ehsanik/dogTorch">Website</a>) (<a href="https://github.com/ehsanik/dogTorch">Code</a>)</p>
           <p>DECADE is a dataset that captures the world from a dog's perspective, enabling the modeling of a visually intelligent agent that can predict and plan movements, thereby offering unique insights and improvements in visual intelligence tasks.</p>
         
@@ -477,7 +521,7 @@
         <img class="teaser" src="static/selected_works/segan.jpg">
         <div class="paper-details">
           <h3><a href="https://arxiv.org/pdf/1703.10239.pdf">SeGAN: Segmenting and Generating the Invisible</a></h3>
-          <p>Kiana Ehsani, Roozbeh Mottaghi, and Ali Farhadi • CVPR • 2018</p>
+          <p><b>Kiana Ehsani</b>, Roozbeh Mottaghi, and Ali Farhadi • CVPR • 2018</p>
           <p>(<a href="https://arxiv.org/abs/1703.10239">Paper</a>) (<a href="https://github.com/ehsanik/SeGAN">Code</a>) (<a href="https://github.com/ehsanik/SeGAN">Website</a>) (<a href="https://drive.google.com/file/d/1TfrP4Sptm6wPMdrn9MrWghfTNAMTCtlY/view?usp=sharing">Data</a>)</p>
           <p>SeGAN is designed to generate and segment occluded parts of objects and infer depth layering, even when trained on synthetic images, it can reliably process natural images by understanding occluder-occludee relationships.</p>
         
