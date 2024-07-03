@@ -1,9 +1,328 @@
+<!-- index.html -->
+<!-- base.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0.1; url='Home.html'" />
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style>
+        /* Add your common CSS styles here */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head> -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Kiana Ehsani</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+      header img {
+        width: 50px;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+      header h1 {
+        display: inline;
+        margin-left: 10px;
+        font-size: 24px;
+        vertical-align: middle;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        background: #444;
+        text-align: center;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+      nav ul li a:hover {
+        background: #555;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+      }
+      .container h1, .container h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+      }
+      .container p {
+        line-height: 1.6;
+      }
+      .container .updates {
+        margin-bottom: 20px;
+      }
+      .container .updates p {
+        margin: 5px 0;
+      }
+      .container .contact a img {
+        margin: 5px;
+        vertical-align: middle;
+      }
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      .contact {
+            margin-top: 20px;
+            text-align: center;
+
+        }
+        .contact a img {
+            margin: 5px;
+            vertical-align: middle;
+        }
+        .selected_work_img{
+            width:100px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px 0;
+        }
+        .column {
+            flex: 1;
+            padding: 0px;
+        }
+        .papers-container {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .paper {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+        }
+        .teaser {
+          flex: 0 0 200px; /* Adjust width as needed */
+          max-width: 200px;
+          height: auto;
+          border-radius: 8px;
+        }
+        .paper-details {
+          flex: 1;
+        }
+        .paper-details h3 {
+          margin-top: 0;
+        }
+        
+        .header_main {
+            position: relative;
+            background: url('static/mtn_bg.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        .header_main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+            z-index: 0;
+        }
+
+        .left-column, .right-column {
+            position: relative;
+            z-index: 1;
+        }
+        .left-column {
+            flex: 0 0 600px; /* Adjust width as needed */
+            text-align: center;
+            margin-right: 20px; /* Adjust the margin to move it closer to center-left */
+        }
+        .left-column img {
+            border-radius: 8px;
+            max-width: 300px;
+            height: auto;
+        }
+        .small-font {
+            font-size: 0.6em;
+        }
+        .right-column {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .right-column h1 {
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+        .right-column p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+    </style>
   </head>
-  <body>
-    <p>Please follow <a href="Home.html">this link</a>.</p>
-  </body>
+<body>
+    <header>
+        <header>
+            <img src="static/kiana_small.jpg" alt="Kiana Ehsani">
+            <h1>Kiana Ehsani</h1>
+          </header>
+        <!-- <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/selected_works.html">Selected Works</a></li>
+              <li><a href="/cv.html">CV</a></li>
+              <li><a href="/mountains.html">Mountains</a></li>
+            </ul>
+          </nav> -->
+          <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="/selected_works.html">Selected Works</a></li> -->
+                <li><a href="selected_works.html">Selected Works</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="mountains.html">Mountains</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        
+  <!-- <div class="header_main" bg_image="static/mtn_bg.jpg">
+    <img src="static/kiana_main.jpg" width=300px; alt="Kiana Ehsani">
+    <p style="small font">** It is not hard to see that I am the worst with design or visual art! Bear with me :D
+    </p>
+    # Second column
+    <h1>Kiana Ehsani</h1>
+    <p> Senior Research Scientist <br>
+      PRIOR <br>
+      Allen Institute for Artificial Intelligence</p>
+  </div> -->
+  <div class="header_main">
+    <div class="left-column">
+        <img src="static/kiana_main.jpg" alt="Kiana Ehsani">
+        <p class="small-font">** It is not hard to see that I am the worst with design or visual art! Bear with me :D</p>
+    </div>
+    <div class="right-column">
+        <h1>Kiana Ehsani</h1>
+        <p>Senior Research Scientist <br> PRIOR <br> Allen Institute for Artificial Intelligence</p>
+    </div>
+</div>
+  <div class="container">
+    <h1>Who am I?</h1>
+    <p>I am currently a senior research scientist @ <a href="https://prior.allenai.org/">PRIOR</a> @ <a href="https://allenai.org/">Allen Institute for AI</a>. Prior to joining PRIOR 😁, I was a Ph.D. student @ <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at the <a href="https://www.washington.edu/">University of Washington</a> under the supervision of Professor <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a>. My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI).</p>
+    <h1>What's up?</h1>
+    <div class="updates">
+      <p>2024.02.16: Gave a talk at University of Pittsburgh.</p>
+      <p>2024.01.01: AC @ CVPR 2024.</p>
+      <p>2024.01.16: Visited Stanford and Berkeley and gave a talk at BAIR.</p>
+      <p>2023.12.12: <a href="https://objaverse.allenai.org/">Obajverse-XL</a> @ NeurIPS 2023.</p>
+      <p>2023.11.06: Co-organized the Workshop <a href="https://sites.google.com/view/corl23-task-workshop">"What tasks should robotics researchers focus on?"</a> @ CoRL 2023.</p>
+      <p>2023.06.21: <a href="https://sfa.cs.columbia.edu/">Structure From Action</a> @ IROS 2023.</p>
+      <p>2023.06.21: <a href="https://phone2proc.allenai.org/">Phone2Proc</a> and <a href="https://objaverse.allenai.org/">Objaverse</a> @ CVPR 2023.</p>
+      <p>2023.06.18: Gave a talk @ <a href="https://struco3d.github.io/cvpr2023/">Structural and Compositional Learning on 3D Data</a> @ CVPR 2023.</p>
+      <p>2023.01.03: DEI co-chair @ <a href="https://wacv2023.thecvf.com/organizers">WACV 2023</a>.</p>
+      <p>2022.12.15: Gave a talk @ <a href="https://gjstein.github.io/corl2022wkshp-long-horizon-planning/">Long Horizon Planning Workshop</a> @ CoRL 2022.</p>
+      <p>2022.12.15: Co-organized the workshop @ <a href="https://sites.google.com/view/corl22benchmarkingworkshop/home">Benchmarking in Robotic Manipulation</a> @ CoRL 2022.</p>
+      <p>2022.11.22: Won outstanding paper for our work <a href="https://procthor.allenai.org/">ProcTHOR</a> @ NeurIPS 2022.</p>
+      <p>2022.11.17: Gave a talk @ CMU.</p>
+      <p>2022.10.24: <a href="https://prior.allenai.org/projects/m-vole">Object Manipulation via Visual Target Localization</a> @ ECCV 2022.</p>
+      <p>2022.06.23: <a href="https://prior.allenai.org/projects/csr">Continuous Scene Representation</a> @ CVPR 2022.</p>
+    </div>
+    <h2>Get in touch</h2>
+    <div class="contact">
+      <a href="https://github.com/ehsanik"><img src="static/github_logo.png" alt="GitHub" width="28" height="28"></a>
+      <a href="https://twitter.com/ehsanik"><img src="static/x_logo.png" alt="Twitter" width="28" height="28"></a>
+      <a href="https://scholar.google.com/citations?user=RScZCLEAAAAJ&hl=en"><img src="static/gscholar.png" alt="Google Scholar" width="32" height="32"></a>
+      <a href="mailto:ehsanik@gmail.com"><img src="static/email_logo.png" alt="Email" width="32" ></a>
+   
+
+    </div>
+  </div>
+
+        <br><br><br><br><br>
+    </div>
+    <footer>
+        <p>© 2024 Kiana Ehsani. All rights reserved.</p>
+      </footer>
+</body>
 </html>

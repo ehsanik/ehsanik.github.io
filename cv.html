@@ -1,0 +1,282 @@
+
+<!-- index.html -->
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style>
+        /* Add your common CSS styles here */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head> -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Kiana Ehsani</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+      header img {
+        width: 50px;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+      header h1 {
+        display: inline;
+        margin-left: 10px;
+        font-size: 24px;
+        vertical-align: middle;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        background: #444;
+        text-align: center;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+      nav ul li a:hover {
+        background: #555;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+      }
+      .container h1, .container h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+      }
+      .container p {
+        line-height: 1.6;
+      }
+      .container .updates {
+        margin-bottom: 20px;
+      }
+      .container .updates p {
+        margin: 5px 0;
+      }
+      .container .contact a img {
+        margin: 5px;
+        vertical-align: middle;
+      }
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      .contact {
+            margin-top: 20px;
+            text-align: center;
+
+        }
+        .contact a img {
+            margin: 5px;
+            vertical-align: middle;
+        }
+        .selected_work_img{
+            width:100px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px 0;
+        }
+        .column {
+            flex: 1;
+            padding: 0px;
+        }
+        .papers-container {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .paper {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+        }
+        .teaser {
+          flex: 0 0 200px; /* Adjust width as needed */
+          max-width: 200px;
+          height: auto;
+          border-radius: 8px;
+        }
+        .paper-details {
+          flex: 1;
+        }
+        .paper-details h3 {
+          margin-top: 0;
+        }
+        
+        .header_main {
+            position: relative;
+            background: url('static/mtn_bg.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        .header_main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+            z-index: 0;
+        }
+
+        .left-column, .right-column {
+            position: relative;
+            z-index: 1;
+        }
+        .left-column {
+            flex: 0 0 600px; /* Adjust width as needed */
+            text-align: center;
+            margin-right: 20px; /* Adjust the margin to move it closer to center-left */
+        }
+        .left-column img {
+            border-radius: 8px;
+            max-width: 300px;
+            height: auto;
+        }
+        .small-font {
+            font-size: 0.6em;
+        }
+        .right-column {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .right-column h1 {
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+        .right-column p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+    </style>
+  </head>
+<body>
+    <header>
+        <header>
+            <img src="static/kiana_small.jpg" alt="Kiana Ehsani">
+            <h1>Kiana Ehsani</h1>
+          </header>
+        <!-- <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/selected_works.html">Selected Works</a></li>
+              <li><a href="/cv.html">CV</a></li>
+              <li><a href="/mountains.html">Mountains</a></li>
+            </ul>
+          </nav> -->
+          <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="/selected_works.html">Selected Works</a></li> -->
+                <li><a href="selected_works.html">Selected Works</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="mountains.html">Mountains</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        
+  <div class="container">
+    <iframe src="https://drive.google.com/file/d/1kWAums2v1mGVGV1A8ZTytSEK3Goa5pUH/preview" width=100% height=800px allow="autoplay"></iframe>
+
+  </div>
+
+        <br><br><br><br><br>
+    </div>
+    <footer>
+        <p>© 2024 Kiana Ehsani. All rights reserved.</p>
+      </footer>
+</body>
+</html>
