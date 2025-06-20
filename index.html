@@ -10,16 +10,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiana Ehsani</title>
     <meta name="description" content="Kiana Ehsani's Personal Website">
     <link rel="canonical" href="https://ehsanik.github.io/">
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
+        background-color: #f8f9fa;
+        color: #2c3e50;
+        line-height: 1.6;
       }
       header {
         background: #333;
@@ -58,8 +60,10 @@
         background: #555;
       }
       .container {
-        width: 80%;
+        max-width: 1200px;
+        width: 90%;
         margin: 20px auto;
+        padding: 0 20px;
       }
       .container h1, .container h2 {
         border-bottom: 2px solid #333;
@@ -79,12 +83,11 @@
         vertical-align: middle;
       }
       footer {
-        background: #333;
+        background: #2c3e50;
         color: #fff;
         text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        bottom: 0;
+        padding: 20px 0;
+        margin-top: 50px;
         width: 100%;
       }
       .contact {
@@ -170,12 +173,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px;
+            padding: 40px 20px;
             color: white;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            min-height: 400px;
+            gap: 30px;
         }
         .header_main::before {
             content: '';
@@ -193,29 +197,37 @@
             z-index: 1;
         }
         .left-column {
-            flex: 0 0 600px; /* Adjust width as needed */
+            flex: 0 0 auto;
             text-align: center;
-            margin-right: 20px; /* Adjust the margin to move it closer to center-left */
+            max-width: 350px;
         }
         .left-column img {
-            border-radius: 8px;
-            max-width: 300px;
+            border-radius: 12px;
+            max-width: 100%;
             height: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         .small-font {
-            font-size: 0.6em;
+            font-size: 0.75em;
+            margin-top: 10px;
+            font-style: italic;
         }
         .right-column {
-            flex: 1;
+            flex: 0 0 auto;
+            text-align: left;
             padding-left: 20px;
         }
         .right-column h1 {
             margin-top: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         .right-column p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: 300;
+            line-height: 1.4;
         }
         .btn_inv {
         display: inline-block;
@@ -234,6 +246,115 @@
       .btn_inv:hover {
         background-color: #e0e0e0; /* Slightly darker on hover */
         color: #333; /* Slightly visible text on hover */
+      }
+
+      /* Responsive Design Media Queries */
+      @media (max-width: 1024px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .container {
+          width: 95%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header_main {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px 15px;
+          min-height: auto;
+          gap: 20px;
+        }
+        
+        .left-column {
+          max-width: 250px;
+          margin-bottom: 20px;
+        }
+        
+        .right-column {
+          text-align: center;
+          padding-left: 0;
+        }
+        
+        .right-column h1 {
+          font-size: 2.2em;
+        }
+        
+        .right-column p {
+          font-size: 1.1em;
+        }
+        
+        .container {
+          width: 95%;
+          padding: 0 15px;
+        }
+        
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+        
+        .paper {
+          flex-direction: column;
+        }
+        
+        .teaser {
+          flex: none;
+          max-width: 100%;
+          margin-bottom: 15px;
+        }
+        
+        nav ul li {
+          display: block;
+          margin: 5px 0;
+        }
+        
+        nav ul li a {
+          display: block;
+          padding: 12px 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header_main {
+          padding: 20px 10px;
+        }
+        
+        .left-column {
+          max-width: 200px;
+        }
+        
+        .right-column h1 {
+          font-size: 1.8em;
+        }
+        
+        .right-column p {
+          font-size: 1em;
+        }
+        
+        .container {
+          width: 98%;
+          padding: 0 10px;
+        }
+        
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+        
+        .small-font {
+          font-size: 0.7em;
+        }
+        
+        header h1 {
+          font-size: 18px;
+        }
+        
+        .contact a img {
+          width: 24px;
+          height: 24px;
+        }
       }
     </style>
     <meta name="robots" content="index, follow">
@@ -261,7 +382,7 @@
                 <li><a href="index.html">Home</a></li>
                 <!-- <li><a href="/selected_works.html">Selected Works</a></li> -->
                 <li><a href="selected_works.html">Selected Works</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <!-- <li><a href="cv.html">CV</a></li> -->
                 <li><a href="mountains.html">Mountains</a></li>
             </ul>
         </nav>
@@ -276,12 +397,12 @@
     </div>
     <div class="right-column">
         <h1>Kiana Ehsani</h1>
-        <p>Senior Research Scientist <br> PRIOR <br> Allen Institute for Artificial Intelligence</p>
+        <p>CEO & Cofounder <br> <a href="https://vercept.com" style="color: white; text-decoration: none;">Vercept</a></p>
     </div>
 </div>
   <div class="container">
     <h1>Who am I?</h1>
-    <p>I am in building mode! I was a senior research scientist @ <a href="https://allenai.org/">Ai2</a> and got my Ph.D. from <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at <a href="https://www.washington.edu/">University of Washington</a> (<a href="https://raivn.cs.washington.edu/">RAIVN Lab</a>) under the supervision of <a href="https://homes.cs.washington.edu/~ali/">Ali Farhadi</a> and <a href="https://roozbehm.info/">Roozbeh Mottaghi</a>. My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI). [For my full bio, please refer to my <a href="bio_for_talks.txt">bio for talks</a>]</p>
+    <p>I am building the future of Computer AI with my amazing team at <a href="https://vercept.com">Vercept</a>. Previously, I was a senior research scientist @ <a href="https://allenai.org/">Ai2</a> and got my Ph.D. from <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at <a href="https://www.washington.edu/">University of Washington</a> (<a href="https://raivn.cs.washington.edu/">RAIVN Lab</a>). My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI). [For my full bio, please refer to my <a href="bio_for_talks.txt">bio for talks</a>]</p>
 
     
 
@@ -290,16 +411,19 @@
     <div class="updates-container">
       <div class="updates">
 
+        <p>🏆 2025.06.12: <a href="https://arxiv.org/abs/2409.17146">Molmo</a> won best paper honorable mention at CVPR 2025.</p>
+        <p>🎤 2025.06.11: Gave talks at two CVPR 2025 workshops: <a href="https://syndata4cv.github.io/">Synthetic Data for Computer Vision</a> and <a href="https://scene-understanding.com/">3D Scene Understanding</a>.</p>
         <p>🎤 2024.11.09: Gave a talk @ <a href="https://sites.google.com/view/xembodimentworkshop">Workshop on X-Embodiment Robot Learning</a> @ CoRL 2024.</p>
         <p>🏆 2024.11.07: <a href="https://poliformer.allen.ai/">Poliformer</a> got the best paper award at CoRL 2024.</p>
         <p>🎤 2024.11.04: Gave a talk at <a href="https://symposium-tuda-2024.robot-learning.net/">TU Darmstadt, Next-Gen Robot Learning Symposium</a>.</p>
         <p>🎤 2024.10.18: Gave a talk at the robotics colloquium at University of Washington.</p>
         <p>🏆 2024.10.14: <a href="https://rchalyang.github.io/HarmonicMM/">HarmonicMM</a> got the best paper award at IROS 2024.</p>
+        
+      </div>
+      <div class="hidden-updates" style="display: none;">
         <p>🤝 2024.06.21: Hosted the panel <a href="https://youtu.be/ucELzD2YpC4">"CVPR: Past, Present and Future"</a> @ CVPR 2024. Quite fun and lots of challenging topics!</p>
         <p>📄 2024.06.20: Presented two papers @ CVPR 2024, <a href="https://promptable-behaviors.github.io/">Promptable Behavior</a> and <a href="https://spoc-robot.github.io/">SPOC🖖</a>.</p>
         <p>🏆 2024.05.30: <a href="https://robotics-transformer-x.github.io/">RT-X</a> got the best paper award at ICRA 2024.</p>
-      </div>
-      <div class="hidden-updates" style="display: none;">
         <p>🤝 2024.01.01: AC @ CVPR 2024.</p>
         <p>🎤 2024.02.16: Gave a talk at University of Pittsburgh.</p>
         <p>🎤 2024.01.16: Visited Stanford and Berkeley and gave a talk at BAIR.</p>
@@ -382,7 +506,6 @@
     }
   </style>
 
-        <br><br><br><br><br>
     </div>
     <footer>
         <p>© 2024 Kiana Ehsani. All rights reserved.</p>
