@@ -1,18 +1,20 @@
-# Installation
+# kianaehsani.com
+
+Personal website built with React + Vite. Deployed to GitHub Pages via GitHub Actions.
+
+## Development
 
 ```bash
-pip install flask Frozen-Flask
+npm install
+npm run dev
 ```
 
-
-# For deploying on a server
-```bash
-python app.py
-```
-
-# For freezing the flask run to get the static website
+## Build
 
 ```bash
-python freeze.py
+npm run build
 ```
 
+## Deploy
+
+Push to `main` — GitHub Actions will build and deploy automatically.
