@@ -1,30 +1,39 @@
-/* Scoped dark theme for the travel checklist */
+/* ── Travel Checklist - Elegant Light Theme ───── */
 .travel-checklist {
-  --bg: #0b0c10;
-  --card: #121319;
-  --ink: #e8ecf1;
-  --muted: #a7b0ba;
-  --accent: #8fd3fe;
-  --accent-2: #7ef0c1;
-  --danger: #ff6b6b;
-  --ok: #9cff9c;
-  --ring: 0 0 0 3px rgba(143,211,254,.35);
+  --tc-bg: #f8f9fb;
+  --tc-surface: #ffffff;
+  --tc-ink: #1a1a2e;
+  --tc-ink-secondary: #555770;
+  --tc-ink-muted: #8b8da3;
+  --tc-border: #e8e8ee;
+  --tc-border-light: #f0f0f5;
+  --tc-accent: #4f46e5;
+  --tc-accent-hover: #4338ca;
+  --tc-accent-light: #eef2ff;
+  --tc-danger: #ef4444;
+  --tc-danger-light: #fef2f2;
+  --tc-green: #059669;
+  --tc-green-light: #ecfdf5;
+  --tc-radius: 12px;
+  --tc-radius-lg: 16px;
+  --tc-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+  --tc-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   min-height: 100vh;
-  background: radial-gradient(1200px 600px at 100% -10%, rgba(126,240,193,.08), transparent 60%),
-              radial-gradient(1100px 500px at -20% 10%, rgba(143,211,254,.09), transparent 60%),
-              var(--bg);
-  color: var(--ink);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: var(--tc-bg);
+  color: var(--tc-ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .travel-checklist .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 16px 80px;
+  padding: 32px 24px 80px;
   width: auto;
 }
 
+/* ── Header ───────────────────────────────────── */
 .travel-checklist header {
   display: flex;
   align-items: center;
@@ -32,20 +41,67 @@
   justify-content: space-between;
   flex-wrap: wrap;
   background: transparent;
-  color: var(--ink);
-  padding: 0;
+  color: var(--tc-ink);
+  padding: 0 0 24px;
   text-align: left;
+  border-bottom: 1px solid var(--tc-border);
+  margin-bottom: 24px;
 }
 
 .travel-checklist .title {
-  font-size: clamp(20px, 3.4vw, 32px);
-  letter-spacing: .3px;
+  font-size: clamp(20px, 3.4vw, 28px);
+  letter-spacing: -0.02em;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--tc-ink);
 }
 
+.travel-checklist .title svg {
+  color: var(--tc-accent);
+}
+
+/* ── Search ───────────────────────────────────── */
+.travel-checklist .search {
+  flex: 1 1 280px;
+  min-width: 230px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--tc-surface);
+  border-radius: 100px;
+  padding: 6px 16px;
+  border: 1px solid var(--tc-border);
+  transition: border-color var(--tc-transition), box-shadow var(--tc-transition);
+}
+
+.travel-checklist .search:focus-within {
+  border-color: var(--tc-accent);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+
+.travel-checklist .search svg {
+  color: var(--tc-ink-muted);
+  flex-shrink: 0;
+}
+
+.travel-checklist .search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--tc-ink);
+  outline: none;
+  padding: 8px 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.travel-checklist .search input::placeholder {
+  color: var(--tc-ink-muted);
+}
+
+/* ── Controls ─────────────────────────────────── */
 .travel-checklist .controls {
   display: flex;
   gap: 8px;
@@ -54,67 +110,56 @@
 
 .travel-checklist button {
   appearance: none;
-  border: none;
-  background: linear-gradient(180deg, #1b1e27, #131622);
-  color: var(--ink);
-  padding: 10px 14px;
-  border-radius: 14px;
+  border: 1px solid var(--tc-border);
+  background: var(--tc-surface);
+  color: var(--tc-ink-secondary);
+  padding: 8px 16px;
+  border-radius: 100px;
   cursor: pointer;
-  font-weight: 600;
-  letter-spacing: .2px;
-  box-shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 0 0 1px rgba(255,255,255,.06), 0 6px 20px rgba(0,0,0,.25);
-  transition: transform .04s ease, box-shadow .2s ease, background .2s ease;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: inherit;
+  transition: all var(--tc-transition);
 }
 
 .travel-checklist button:hover {
-  box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 0 0 1px rgba(143,211,254,.35), 0 10px 30px rgba(143,211,254,.12);
+  color: var(--tc-ink);
+  border-color: #ccc;
+  background: var(--tc-border-light);
 }
 
 .travel-checklist button:active {
-  transform: translateY(1px);
+  transform: scale(0.98);
 }
 
 .travel-checklist button.primary {
-  background: linear-gradient(180deg, #1c2a3b, #122132);
-  border: 1px solid rgba(143,211,254,.45);
+  background: var(--tc-accent);
+  color: #fff;
+  border-color: var(--tc-accent);
+}
+
+.travel-checklist button.primary:hover {
+  background: var(--tc-accent-hover);
+  border-color: var(--tc-accent-hover);
+  color: #fff;
 }
 
 .travel-checklist button.danger {
-  background: linear-gradient(180deg, #351d1d, #281415);
-  border: 1px solid rgba(255,107,107,.45);
+  color: var(--tc-danger);
+  border-color: rgba(239,68,68,0.3);
 }
 
-.travel-checklist .search {
-  flex: 1 1 280px;
-  min-width: 230px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(180deg, #191c25, #141826);
-  border-radius: 14px;
-  padding: 8px 12px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,.06);
+.travel-checklist button.danger:hover {
+  background: var(--tc-danger-light);
+  border-color: var(--tc-danger);
 }
 
-.travel-checklist .search input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  color: var(--ink);
-  outline: none;
-  padding: 8px;
-  font-size: 14px;
-}
-
-.travel-checklist .search input::placeholder {
-  color: var(--muted);
-}
-
+/* ── Grid ─────────────────────────────────────── */
 .travel-checklist .grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 @media (min-width: 860px) {
@@ -123,35 +168,47 @@
   }
 }
 
+/* ── Cards ────────────────────────────────────── */
 .travel-checklist section.card {
-  background: linear-gradient(180deg, #12141c, #0f1119);
-  border-radius: 18px;
-  padding: 14px 14px 8px;
+  background: var(--tc-surface);
+  border-radius: var(--tc-radius-lg);
+  padding: 20px;
   position: relative;
-  box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 12px 30px rgba(0,0,0,.35);
+  border: 1px solid var(--tc-border);
+  box-shadow: var(--tc-shadow);
+  transition: box-shadow var(--tc-transition);
+}
+
+.travel-checklist section.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 12px 40px rgba(0,0,0,0.04);
 }
 
 .travel-checklist .card header {
   gap: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   align-items: flex-start;
+  padding: 0;
+  border-bottom: none;
 }
 
 .travel-checklist .h2 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--tc-ink);
 }
 
 .travel-checklist .count {
   font-variant-numeric: tabular-nums;
-  padding: 4px 8px;
-  background: rgba(143,211,254,.12);
-  color: var(--accent);
-  border-radius: 10px;
-  font-weight: 700;
+  padding: 2px 8px;
+  background: var(--tc-accent-light);
+  color: var(--tc-accent);
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .travel-checklist .sec-controls {
@@ -160,11 +217,17 @@
   flex-wrap: wrap;
 }
 
+.travel-checklist .sec-controls button {
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+/* ── Checklist items ──────────────────────────── */
 .travel-checklist .list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4px;
-  margin-top: 8px;
+  gap: 2px;
+  margin-top: 12px;
 }
 
 .travel-checklist label.item {
@@ -172,58 +235,71 @@
   gap: 10px;
   align-items: flex-start;
   padding: 8px 10px;
-  border-radius: 12px;
+  border-radius: var(--tc-radius);
   cursor: pointer;
-  transition: background .15s ease;
+  transition: background var(--tc-transition);
 }
 
 .travel-checklist label.item:hover {
-  background: rgba(143,211,254,.07);
+  background: var(--tc-accent-light);
 }
 
-.travel-checklist .item input {
+.travel-checklist .item input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  margin-top: 2px;
+  margin-top: 1px;
+  accent-color: var(--tc-accent);
+  cursor: pointer;
 }
 
 .travel-checklist .item .txt {
-  line-height: 1.25;
+  line-height: 1.4;
+  font-size: 14px;
+  color: var(--tc-ink-secondary);
 }
 
+/* ── Footer ───────────────────────────────────── */
 .travel-checklist .footer {
-  margin-top: 18px;
+  margin-top: 24px;
   display: flex;
   gap: 10px;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
 .travel-checklist .footer .stamp {
-  color: var(--muted);
-  font-size: 12px;
+  color: var(--tc-ink-muted);
+  font-size: 13px;
 }
 
+/* ── Dialog / Modal ───────────────────────────── */
 .travel-checklist dialog {
   border: none;
   padding: 0;
   background: transparent;
 }
 
+.travel-checklist dialog::backdrop {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(4px);
+}
+
 .travel-checklist .modal {
-  background: linear-gradient(180deg, #171924, #10121b);
-  border-radius: 18px;
-  width: min(560px, 92vw);
-  box-shadow: 0 20px 70px rgba(0,0,0,.6);
-  border: 1px solid rgba(255,255,255,.06);
+  background: var(--tc-surface);
+  border-radius: var(--tc-radius-lg);
+  width: min(480px, 92vw);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  border: 1px solid var(--tc-border);
 }
 
 .travel-checklist .modal header {
-  padding: 16px 16px 0;
+  padding: 20px 20px 0;
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .travel-checklist .modal .body {
-  padding: 12px 16px 16px;
+  padding: 16px 20px 20px;
 }
 
 .travel-checklist .add-form {
@@ -235,19 +311,24 @@
 
 .travel-checklist .add-form input,
 .travel-checklist .add-form select {
-  background: #0f1220;
-  color: var(--ink);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 12px;
-  padding: 10px 12px;
+  background: var(--tc-bg);
+  color: var(--tc-ink);
+  border: 1px solid var(--tc-border);
+  border-radius: var(--tc-radius);
+  padding: 10px 14px;
   outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color var(--tc-transition), box-shadow var(--tc-transition);
 }
 
 .travel-checklist .add-form input:focus,
 .travel-checklist .add-form select:focus {
-  box-shadow: var(--ring);
+  border-color: var(--tc-accent);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
 }
 
+/* ── Print ────────────────────────────────────── */
 @media print {
   .travel-checklist .controls,
   .travel-checklist .sec-controls,

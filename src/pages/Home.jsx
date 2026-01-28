@@ -42,56 +42,69 @@ function Home() {
 
   return (
     <>
-      <div className="header_main" style={{ backgroundImage: `url(${mtnBg})` }}>
-        <div className="left-column">
-          <img src={kianaMain} alt="Kiana Ehsani" />
-          <p className="small-font">** It is not hard to see that I am the worst with design or visual art! Bear with me :D</p>
+      <section className="hero" style={{ backgroundImage: `url(${mtnBg})` }}>
+        <div className="hero-content">
+          <div className="hero-photo">
+            <img src={kianaMain} alt="Kiana Ehsani" />
+            <p className="hero-caption">** It is not hard to see that I am the worst with design or visual art! Bear with me :D</p>
+          </div>
+          <div className="hero-text">
+            <h1>Kiana Ehsani</h1>
+            <p>Cofounder <br /> <a href="https://vercept.com">Vercept</a></p>
+          </div>
         </div>
-        <div className="right-column">
-          <h1>Kiana Ehsani</h1>
-          <p>Cofounder <br /> <a href="https://vercept.com" style={{ color: 'white', textDecoration: 'none' }}>Vercept</a></p>
-        </div>
-      </div>
+      </section>
 
       <div className="container">
-        <h1>Who am I?</h1>
-        <p>
-          I am building the future of Computer AI with my amazing team at <a href="https://vercept.com">Vercept</a>.
-          Previously, I was a senior research scientist @ <a href="https://allenai.org/">Ai2</a> and got my Ph.D. from{' '}
-          <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at{' '}
-          <a href="https://www.washington.edu/">University of Washington</a> (<a href="https://raivn.cs.washington.edu/">RAIVN Lab</a>).
-          My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI).
-        </p>
+        <section className="bio">
+          <h1>Who am I?</h1>
+          <p>
+            I am building the future of Computer AI with my amazing team at <a href="https://vercept.com">Vercept</a>.
+            Previously, I was a senior research scientist @ <a href="https://allenai.org/">Ai2</a> and got my Ph.D. from{' '}
+            <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at{' '}
+            <a href="https://www.washington.edu/">University of Washington</a> (<a href="https://raivn.cs.washington.edu/">RAIVN Lab</a>).
+            My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI).
+          </p>
+        </section>
 
-        <h1>What&apos;s up?</h1>
+        <hr className="section-divider" />
 
-        <div className="updates-container">
-          <div className="updates">
+        <section>
+          <h1>What&apos;s up?</h1>
+          <div className="updates-section">
             {recentUpdates.map((u, i) => (
-              <p key={i}>{u.emoji} {u.date}: {u.text}</p>
+              <div className="update-item" key={`r${i}`}>
+                <span className="update-emoji">{u.emoji}</span>
+                <span className="update-date">{u.date}</span>
+                <span className="update-text">{u.text}</span>
+              </div>
+            ))}
+            {showMore && olderUpdates.map((u, i) => (
+              <div className="update-item" key={`o${i}`}>
+                <span className="update-emoji">{u.emoji}</span>
+                <span className="update-date">{u.date}</span>
+                <span className="update-text">{u.text}</span>
+              </div>
             ))}
           </div>
-          {showMore && (
-            <div className="hidden-updates">
-              {olderUpdates.map((u, i) => (
-                <p key={i}>{u.emoji} {u.date}: {u.text}</p>
-              ))}
-            </div>
-          )}
           <div className="show-more-container">
             <button className="text-btn" onClick={() => setShowMore(!showMore)}>
-              {showMore ? 'Show Less' : 'Show more updates'}
+              {showMore ? 'Show less' : 'Show more updates'}
             </button>
           </div>
-        </div>
+        </section>
 
-        <h2>Get in touch</h2>
-        <div className="contact">
-          <a href="https://github.com/ehsanik"><img src={githubLogo} alt="GitHub" width="28" height="28" /></a>
-          <a href="https://twitter.com/ehsanik"><img src={xLogo} alt="Twitter" width="28" height="28" /></a>
-          <a href="https://scholar.google.com/citations?user=RScZCLEAAAAJ&hl=en"><img src={gscholar} alt="Google Scholar" width="32" height="32" /></a>
-          <a href="mailto:ehsanik@gmail.com"><img src={emailLogo} alt="Email" width="32" /></a>
-        </div>
+        <hr className="section-divider" />
+
+        <section>
+          <h2>Get in touch</h2>
+          <div className="contact">
+            <a href="https://github.com/ehsanik" aria-label="GitHub"><img src={githubLogo} alt="GitHub" /></a>
+            <a href="https://twitter.com/ehsanik" aria-label="Twitter"><img src={xLogo} alt="Twitter" /></a>
+            <a href="https://scholar.google.com/citations?user=RScZCLEAAAAJ&hl=en" aria-label="Google Scholar"><img src={gscholar} alt="Google Scholar" /></a>
+            <a href="mailto:ehsanik@gmail.com" aria-label="Email"><img src={emailLogo} alt="Email" /></a>
+          </div>
+        </section>
       </div>
     </>
   )

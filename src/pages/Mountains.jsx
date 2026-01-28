@@ -28,42 +28,33 @@ const photos = [
 
 function Mountains() {
   return (
-    <>
-      <div className="container">
-        <h2>Checklist Generator</h2>
-        <div className="two-columns">
-          <div className="column">
-            <p>I recently made myself a checklist generator for outdoor adventures.</p>
-          </div>
-          <div className="column">
-            <p style={{ textAlign: 'center' }}>
-              <a className="btn" href="https://ehsanik.github.io/mountain-projects/">
-                Use it for your adventures!
-              </a>
-            </p>
-          </div>
-        </div>
+    <div className="container">
+      <div className="mtn-checklist-row">
+        <p>I recently made myself a checklist generator for outdoor adventures.</p>
+        <a className="btn" href="https://ehsanik.github.io/mountain-projects/">
+          Use it for your adventures!
+        </a>
       </div>
 
-      <div className="container">
-        <h2>Some Random Memories</h2>
-        <div className="grid">
-          {photos.map((photo, i) => (
-            <div className="grid-item" key={i}>
-              <img src={photo.src} alt={photo.caption} />
-              <p>{photo.caption}</p>
-            </div>
-          ))}
-        </div>
+      <hr className="section-divider" />
+
+      <h2>Some Random Memories</h2>
+      <div className="photo-grid">
+        {photos.map((photo, i) => (
+          <div className="photo-card" key={i}>
+            <img src={photo.src} alt={photo.caption} />
+            <div className="photo-caption">{photo.caption}</div>
+          </div>
+        ))}
       </div>
 
-      <div className="container">
-        <h2>Some Travel Reports</h2>
-        <p style={{ textAlign: 'center' }}>
-          <a className="btn_inv" href="https://ehsanik.github.io/kiana-travels">Kiana Travels</a>
-        </p>
-      </div>
-    </>
+      <hr className="section-divider" />
+
+      <h2>Some Travel Reports</h2>
+      <p style={{ textAlign: 'center' }}>
+        <a className="btn-outline" href="https://ehsanik.github.io/kiana-travels">Kiana Travels</a>
+      </p>
+    </div>
   )
 }
 
