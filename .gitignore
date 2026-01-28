@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Build output
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
