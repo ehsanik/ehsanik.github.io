@@ -64,6 +64,7 @@ function Home() {
             <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science</a> at{' '}
             <a href="https://www.washington.edu/">University of Washington</a> (<a href="https://raivn.cs.washington.edu/">RAIVN Lab</a>).
             My research interest is in the intersection of computer vision, machine learning, and robotics (aka. embodied AI).
+            {' '}<a href="/bio_for_talks.txt" target="_blank" rel="noopener noreferrer">Click here for bio for talks</a>.
           </p>
         </section>
 
