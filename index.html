@@ -12,7 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="description" content="Kiana Ehsani's Personal Website" />
+    <link rel="canonical" href="https://kianaehsani.com/" />
     <meta name="robots" content="index, follow" />
+    <script>
+      // Redirect legacy hash URLs (e.g. /#/mountains) to real paths
+      if (window.location.hash.indexOf('#/') === 0) {
+        window.location.replace(
+          window.location.hash.slice(1) + window.location.search
+        );
+      }
+    </script>
     <meta name="google-site-verification" content="l9P8Afj1EDRZ7SKXmoB8o5bvT31kF991GrjEUWMvR6A" />
     <meta name="keywords" content="Kiana Ehsani, Allen Institute for AI, Computer Science, Research Scientist, Robotics" />
     <title>Kiana Ehsani</title>
