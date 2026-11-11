@@ -47,13 +47,6 @@ function Mountains() {
           </div>
         ))}
       </div>
-
-      <hr className="section-divider" />
-
-      <h2>Some Travel Reports</h2>
-      <p style={{ textAlign: 'center' }}>
-        <a className="btn-outline" href="https://ehsanik.github.io/kiana-travels">Kiana Travels</a>
-      </p>
     </div>
   )
 }

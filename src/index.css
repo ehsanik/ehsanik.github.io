@@ -552,30 +552,6 @@ a:hover {
   color: #fff;
 }
 
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 24px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: var(--font);
-  color: var(--ink-secondary);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.btn-outline:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-light);
-  text-decoration: none;
-}
-
 .btn_inv {
   display: inline-flex;
   align-items: center;
