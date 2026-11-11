@@ -4,7 +4,6 @@ import mtnBg from '../assets/images/mtn_bg.jpg'
 import githubLogo from '../assets/icons/github_logo.png'
 import xLogo from '../assets/icons/x_logo.png'
 import gscholar from '../assets/icons/gscholar.png'
-import emailLogo from '../assets/icons/email_logo.png'
 
 const recentUpdates = [
   { emoji: '\u{1F3C6}', date: '2025.06.12', text: <><a href="https://arxiv.org/abs/2409.17146">Molmo</a> won best paper honorable mention at CVPR 2025.</> },
@@ -103,7 +102,6 @@ function Home() {
             <a href="https://github.com/ehsanik" aria-label="GitHub"><img src={githubLogo} alt="GitHub" /></a>
             <a href="https://twitter.com/ehsanik" aria-label="Twitter"><img src={xLogo} alt="Twitter" /></a>
             <a href="https://scholar.google.com/citations?user=RScZCLEAAAAJ&hl=en" aria-label="Google Scholar"><img src={gscholar} alt="Google Scholar" /></a>
-            <a href="mailto:ehsanik@gmail.com" aria-label="Email"><img src={emailLogo} alt="Email" /></a>
           </div>
         </section>
       </div>
